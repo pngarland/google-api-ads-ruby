@@ -197,14 +197,14 @@ module AdsCommon
         when :OAUTH2
           environment = @config.read('service.environment',
               api_config.default_environment())
-          AdsCommon::Auth::OAuth2Handler.new(
+          DfpApi::CustomAuthHandler.new(
               @config,
               api_config.environment_config(environment, :oauth_scope)
           )
         when :OAUTH2_JWT
           environment = @config.read('service.environment',
               api_config.default_environment())
-          DfpApi::CustomAuthHandler.new(
+          AdsCommon::Auth::OAuth2JwtHandler.new(
               @config,
               api_config.environment_config(environment, :oauth_scope)
           )
