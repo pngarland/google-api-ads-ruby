@@ -10,11 +10,11 @@ module DfpApi
     end
 
     def property_changed(prop, value)
-      binding.pry
+      # TODO: handle
     end
 
     def handle_error(error)
-      binding.pry
+      # TODO: handle
     end
 
     def auth_string(credentials)
@@ -49,7 +49,7 @@ module DfpApi
     end
 
     def create_token(credentials)
-      binding.pry
+      # TODO: handle
       # @client ||= create_client()
     end
 
